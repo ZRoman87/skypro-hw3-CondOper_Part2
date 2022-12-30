@@ -5,6 +5,7 @@ public class Main {
         task3();
         task4();
         task5();
+
     }
 
     public static void task1 () {
