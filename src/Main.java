@@ -44,6 +44,7 @@ public class Main {
     public static void task3 () {
         System.out.println("Задача 3");
 
+        // мое решение
         int year = 1844;
         int year4 = year % 4;
         int year100 = year % 100;
@@ -57,26 +58,35 @@ public class Main {
             System.out.println("Год " + year + " не является высокосным");
         }
 
+        // решение учителя
+
+        if ((year % 4 == 0 && year % 100 != 0)||(year % 400 == 0)) {
+            System.out.println("Год " + year + " является высокосным");
+        } else {
+            System.out.println("Год " + year + " не является высокосным");
+        }
+
         System.out.println();
     }
 
     public static void task4 () {
         System.out.println("Задача 4");
 
-        int deliveryDistance = 100;
+        int deliveryDistance = 60;
         int deliveryTime = 0;
 
         if (deliveryDistance < 20) {
             deliveryTime = 1;
-            System.out.println("Потребуется дней: " + deliveryTime);
-        } else if ((deliveryDistance >= 20)&(deliveryDistance <60)) {
+        } else if (deliveryDistance <60) {
             deliveryTime = 2;
-            System.out.println("Потребуется дней: " + deliveryTime);
-        } else if ((deliveryDistance >= 60)&(deliveryDistance <100)) {
+        } else if (deliveryDistance <100) {
             deliveryTime = 3;
-            System.out.println("Потребуется дней: " + deliveryTime);
-        } else {
+        }
+
+        if (deliveryTime == 0) {
             System.out.println("Доставки нет");
+        } else {
+            System.out.println("Потребуется дней: " + deliveryTime);
         }
 
         System.out.println();
